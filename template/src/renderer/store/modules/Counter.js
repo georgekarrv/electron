@@ -4,10 +4,10 @@ const state = {
 
 const mutations = {
   DECREMENT_MAIN_COUNTER (state) {
-    {{#if_eq eslintConfig 'airbnb'}}state.main = state.main - 1{{else}}state.main--{{/if_eq}}
+    state.main--
   },
   INCREMENT_MAIN_COUNTER (state) {
-    {{#if_eq eslintConfig 'airbnb'}}state.main = state.main + 1{{else}}state.main++{{/if_eq}}
+    state.main++
   }
 }
 
