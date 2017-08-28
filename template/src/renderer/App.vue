@@ -88,17 +88,18 @@
 </template>
 
 <script>
-{{#isEnabled plugins 'vuerouter'}}
+{{#isEnabled plugins 'vue-router'}}
 {{else}}
-  import LandingPage from '@/components/LandingPage'
+  import WelcomeView from '@/components/WelcomeView'
 {{/isEnabled}}
   export default {
-    name: '{{ name }}'{{#isEnabled plugins 'vuerouter'}}{{else}},{{/isEnabled}}
-{{#isEnabled plugins 'vuerouter'}}
+    name: '{{ name }}'{{#isEnabled plugins 'vue-router'}}{{else}},{{/isEnabled}}
+{{#isEnabled plugins 'vue-router'}}
 {{else}}
     components: {
-      LandingPage
+      WelcomeView
     },
+{{/isEnabled}}
     data: () => ({
       clipped: false,
       drawer: true,
@@ -113,7 +114,6 @@
       title: 'Vuetify.js'
     })
   }
-{{/isEnabled}}
 </script>
 
 <style lang="stylus">
