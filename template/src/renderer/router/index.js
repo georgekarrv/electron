@@ -7,7 +7,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'landing-page',
+      name: 'welcome-view',
       component: require('@/components/WelcomeView')
     },
     {
