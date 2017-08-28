@@ -93,7 +93,7 @@
   import WelcomeView from '@/components/WelcomeView'
 {{/isEnabled}}
   export default {
-    name: '{{ name }}'{{#isEnabled plugins 'vue-router'}}{{else}},{{/isEnabled}}
+    name: '{{ name }}',
 {{#isEnabled plugins 'vue-router'}}
 {{else}}
     components: {
