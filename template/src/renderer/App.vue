@@ -55,13 +55,12 @@
       </v-toolbar>
       <main>
         <v-container fluid fill-height>
-            <router-view></router-view>
             {{#isEnabled plugins 'vue-router'}}
             <v-slide-y-transition mode="out-in">
               <router-view></router-view>
             </v-slide-y-transition>
             {{else}}
-            <landing-page></landing-page>
+            <welcome-view></welcome-view>
             {{/isEnabled}}
         </v-container>
       </main>
