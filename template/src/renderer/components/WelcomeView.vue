@@ -51,7 +51,7 @@
     components: { SystemInformation },
     methods: {
       open (link) {
-        this.$electron.shell.openExternal(link)
+        {{#isEnabled plugins 'vue-electron'}}this.$electron{{else}}require('electron'){{/isEnabled}}.shell.openExternal(link)
       }
     }
   }

@@ -87,34 +87,34 @@
   </div>
 </template>
 
- <script>
+<script>
 {{#isEnabled plugins 'vuerouter'}}
 {{else}}
   import LandingPage from '@/components/LandingPage'
 {{/isEnabled}}
   export default {
-  name: '{{ name }}'{{#isEnabled plugins 'vuerouter'}}{{else}},{{/isEnabled}}
+    name: '{{ name }}'{{#isEnabled plugins 'vuerouter'}}{{else}},{{/isEnabled}}
 {{#isEnabled plugins 'vuerouter'}}
 {{else}}
-  components: {
-    LandingPage
-  },
-  data: () => ({
-    clipped: false,
-    drawer: true,
-    fixed: false,
-    items: [
-      { icon: 'apps', title: 'Welcome', to: '/' },
-      { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' }
-    ],
-    miniVariant: false,
-    right: true,
-    rightDrawer: false,
-    title: 'Vuetify.js'
-  })
-}
+    components: {
+      LandingPage
+    },
+    data: () => ({
+      clipped: false,
+      drawer: true,
+      fixed: false,
+      items: [
+        { icon: 'apps', title: 'Welcome', to: '/' },
+        { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' }
+      ],
+      miniVariant: false,
+      right: true,
+      rightDrawer: false,
+      title: 'Vuetify.js'
+    })
+  }
 {{/isEnabled}}
- </script>
+</script>
 
 <style lang="stylus">
   @import './assets/stylus/main.styl'
