@@ -55,9 +55,14 @@
       </v-toolbar>
       <main>
         <v-container fluid fill-height>
-          <v-slide-y-transition mode="out-in">
             <router-view></router-view>
-          </v-slide-y-transition>
+            {{#isEnabled plugins 'vue-router'}}
+            <v-slide-y-transition mode="out-in">
+              <router-view></router-view>
+            </v-slide-y-transition>
+            {{else}}
+            <landing-page></landing-page>
+            {{/isEnabled}}
         </v-container>
       </main>
       <v-navigation-drawer
@@ -100,6 +105,34 @@
     })
   }
 </script>
+ <script>
+{{#isEnabled plugins 'vuerouter'}}
+{{else}}
+  import LandingPage from '@/components/LandingPage'
+{{/isEnabled}}
+   export default {
+    name: '{{ name }}'{{#isEnabled plugins 'vuerouter'}}{{else}},{{/isEnabled}}
+{{#isEnabled plugins 'vuerouter'}}
+{{else}}
+    components: {
+      LandingPage
+    },
+    data: () => ({
+      clipped: false,
+      drawer: true,
+      fixed: false,
+      items: [
+        { icon: 'apps', title: 'Welcome', to: '/' },
+        { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' }
+      ],
+      miniVariant: false,
+      right: true,
+      rightDrawer: false,
+      title: 'Vuetify.js'
+    })
+   }
+{{/isEnabled}}
+ </script>
 
 <style lang="stylus">
   @import './assets/stylus/main.styl'
