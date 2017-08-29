@@ -2,6 +2,7 @@ import Vue from 'vue'
 {{#isEnabled plugins 'axios'}}
 import axios from 'axios'
 {{/isEnabled}}
+import Vuetify from 'vuetify'
 
 import App from './App'
 {{#isEnabled plugins 'vue-router'}}
@@ -11,6 +12,7 @@ import router from './router'
 import store from './store'
 {{/isEnabled}}
 
+Vue.use(Vuetify)
 {{#isEnabled plugins 'vue-electron'}}
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 {{/isEnabled}}
