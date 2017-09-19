@@ -6,6 +6,7 @@
         :mini-variant="miniVariant"
         :clipped="clipped"
         v-model="drawer"
+        app
       >
         <v-list>
           <v-list-tile 
@@ -24,7 +25,7 @@
           </v-list-tile>
         </v-list>
       </v-navigation-drawer>
-      <v-toolbar fixed>
+      <v-toolbar fixed app>
         <v-toolbar-side-icon @click.native.stop="drawer = !drawer"></v-toolbar-side-icon>
         <v-btn 
           icon
@@ -54,7 +55,8 @@
         </v-btn>
       </v-toolbar>
       <main>
-        <v-container fluid fill-height>
+        <v-content>
+          <v-container fluid fill-height>
             {{#isEnabled plugins 'vue-router'}}
             <v-slide-y-transition mode="out-in">
               <router-view></router-view>
@@ -62,12 +64,14 @@
             {{else}}
             <welcome-view></welcome-view>
             {{/isEnabled}}
-        </v-container>
+          </v-container>
+        </v-content>
       </main>
       <v-navigation-drawer
         temporary
         :right="right"
         v-model="rightDrawer"
+        app
       >
         <v-list>
           <v-list-tile @click.native="right = !right">
@@ -78,7 +82,7 @@
           </v-list-tile>
         </v-list>
       </v-navigation-drawer>
-      <v-footer :fixed="fixed">
+      <v-footer :fixed="fixed" app>
         <v-spacer></v-spacer>
         <span>&copy; 2017</span>
       </v-footer>
