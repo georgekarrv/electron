@@ -119,11 +119,6 @@
   }
 </script>
 
-<style lang="stylus">
-  @import './assets/stylus/main.styl'
-</style>
-
-
 <style>
   @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons');
   /* Global CSS */

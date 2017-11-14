@@ -3,6 +3,7 @@ import Vue from 'vue'
 import axios from 'axios'
 {{/isEnabled}}
 import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.css'
 
 import App from './App'
 {{#isEnabled plugins 'vue-router'}}
