@@ -78,7 +78,7 @@
 {{/if_eq}}
   "dependencies": {
     "vue": "^2.4.2"{{deps plugins}},
-    "vuetify": "0.17.0"
+    "vuetify": "0.17.1"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
