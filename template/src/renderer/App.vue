@@ -2,7 +2,7 @@
   <div id="app">
     <v-app dark>
       <v-navigation-drawer
-        persistent
+        fixed
         :mini-variant="miniVariant"
         :clipped="clipped"
         v-model="drawer"
@@ -54,21 +54,20 @@
           <v-icon>menu</v-icon>
         </v-btn>
       </v-toolbar>
-      <main>
-        <v-content>
-          <v-container fluid fill-height>
-            {{#isEnabled plugins 'vue-router'}}
-            <v-slide-y-transition mode="out-in">
-              <router-view></router-view>
-            </v-slide-y-transition>
-            {{else}}
-            <welcome-view></welcome-view>
-            {{/isEnabled}}
-          </v-container>
-        </v-content>
-      </main>
+      <v-content>
+        <v-container fluid fill-height>
+          {{#isEnabled plugins 'vue-router'}}
+          <v-slide-y-transition mode="out-in">
+            <router-view></router-view>
+          </v-slide-y-transition>
+          {{else}}
+          <welcome-view></welcome-view>
+          {{/isEnabled}}
+        </v-container>
+      </v-content>
       <v-navigation-drawer
         temporary
+        fixed
         :right="right"
         v-model="rightDrawer"
         app
