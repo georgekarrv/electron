@@ -21,6 +21,10 @@ The boilerplate for making electron applications built with vue and vuetify (pre
 [![Build Status](https://semaphoreci.com/api/v1/simulatedgreg/electron-vue/branches/master/badge.svg)](https://semaphoreci.com/simulatedgreg/electron-vue)
 </div>
 
+## Vue-cli 3 plugin enabled!
+
+Try out the new setup using vue cli 3 https://github.com/vuetifyjs/vue-cli-plugin-vuetify
+
 ## Overview
 
 The aim of this project is to remove the need of manually setting up electron apps using vue. electron-vue takes advantage of `vue-cli` for scaffolding, `webpack` with `vue-loader`, `electron-packager` or `electron-builder`, and some of the most used plugins like `vue-router`, `vuex`, and so much more.
